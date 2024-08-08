@@ -52,7 +52,7 @@ fn build_services_phf() {
         services_map.entry(key, &val);
         num_entries += 1;
     }
-    assert_eq!(num_entries, 12066);
+    assert_eq!(num_entries, 12078);
 
     writeln!(
         &mut output,
@@ -188,6 +188,8 @@ pub static SAFE_WORDS_FOR_SERVICE_NAME: Lazy<Trie> = Lazy::new(|| {
         "BackOrifice",
         "dhanalakshmi",
         "3gpp-w1ap",
+        "pmsm-webrctl",
+        "bif-p2p",
     ] {
         safe_words.set(word, Type::SAFE);
     }
